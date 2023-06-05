@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FoodFast</title>
+    <meta name="description" content="Panel de administración y cocina de FoodFast">
+    <meta name="title" content="FoodFast Admin">
+    <link rel="shortcut icon" href="images/forkknife.png" type="image/x-icon">
+    <script type="module" src="js/index.js"></script>
+</head>
+<body>
+    <!-- DIÁLOGOS DE SECCIONES -->
+    <dialog create-section class="modal">
+        <form>
+            <h1>CREAR SECCIÓN</h1>
+            <h3>Nombre de la sección: <input type="text" name="" id="add_section_name"></h3>
+            <br>
+            <h2>Selecciona el icono de la sección:</h2>
+            <div class="img-list">
+                <img src="images/foodicon_beer.svg" alt="0" class="iconfood"/>
+                <img src="images/foodicon_cafe.svg" alt="1" class="iconfood">
+                <img src="images/foodicon_cake.svg" alt="2" class="iconfood">
+                <img src="images/foodicon_croissant.svg" alt="3" class="iconfood">
+                <img src="images/foodicon_drink.svg" alt="4" class="iconfood">
+                <img src="images/foodicon_fish.svg" alt="5" class="iconfood">
+                <img src="images/foodicon_hamburger.svg" alt="6" class="iconfood">
+                <img src="images/foodicon_icecream.svg" alt="7" class="iconfood">
+                <img src="images/foodicon_liquor.svg" alt="8" class="iconfood">
+                <img src="images/foodicon_pizza.svg" alt="9" class="iconfood">
+                <img src="images/foodicon_ramen.svg" alt="10" class="iconfood">
+            </div>
+            <button class="modal-button" formmethod="dialog">Cancelar</button>
+            <button class="modal-button" id="submit_add_section">Añadir</button>
+        </form>
+    </dialog>
+
+    <dialog edit-section class="modal">
+        <form>
+            <h1>EDITAR SECCIÓN</h1>
+            <h3>Selecciona la sección: <select name="sections" id="edit_section_select"></select></h3>
+            <br>
+            <h3>Nombre de la sección: <input type="text" name="sections_name" id="edit_section_name"></h3>
+            <br>
+            <h2>Selecciona el nuevo icono:</h2>
+            <div class="img-list">
+                <img src="images/foodicon_beer.svg" alt="0" class="iconfood"/>
+                <img src="images/foodicon_cafe.svg" alt="1" class="iconfood">
+                <img src="images/foodicon_cake.svg" alt="2" class="iconfood">
+                <img src="images/foodicon_croissant.svg" alt="3" class="iconfood">
+                <img src="images/foodicon_drink.svg" alt="4" class="iconfood">
+                <img src="images/foodicon_fish.svg" alt="5" class="iconfood">
+                <img src="images/foodicon_hamburger.svg" alt="6" class="iconfood">
+                <img src="images/foodicon_icecream.svg" alt="7" class="iconfood">
+                <img src="images/foodicon_liquor.svg" alt="8" class="iconfood">
+                <img src="images/foodicon_pizza.svg" alt="9" class="iconfood">
+                <img src="images/foodicon_ramen.svg" alt="10" class="iconfood">
+            </div>
+            <button class="modal-button" formmethod="dialog">Cancelar</button>
+            <button class="modal-button" id="submit_edit_section">Editar</button>            
+        </form>
+    </dialog>
+
+    <dialog delete-section class="modal">
+        <form>
+            <h1>BORRAR SECCIÓN</h1>
+            <h4>Esto no borrará los items, pero si tendrás que añadirlos manualmente</h4>
+            <br>
+            <h3>Selecciona la sección a borrar: <select name="sections" id="delete_section_select"></select></h3>
+            <br>
+            <button class="modal-button" formmethod="dialog">Cancelar</button>
+            <button class="modal-button" id="submit_delete_section">Borrar</button> 
+        </form>
+    </dialog>
+
+    <!-- DIÁLOGOS DE PRODUCTOS -->
+    <dialog create-product class="modal">
+        <form>
+            <h1>CREAR PRODUCTO</h1>
+            <br>
+            <h3>*Nombre: <input type="text" name="" id="add_product_name"></h3>
+            <h3>Descripción: <input type="text" name="" id="add_product_description"></h3>
+            <h3>*Precio: <input type="number" step="0.01" name="" id="add_product_price"></h3>
+            <h3>¿Disponible?: <input type="checkbox" name="" id="add_product_available"></h3>
+            <br>
+            <h3>Imagen: </h3>
+            <input type="file" id="add_product_image"></input>
+            <button class="modal-button" id="upload_image">Subir</button>
+            <br>
+            <br>
+            <button class="modal-button" formmethod="dialog">Cancelar</button>
+            <button class="modal-button" id="submit_add_product">Añadir</button>
+        </form>
+    </dialog>
+
+    <dialog edit-product class="modal">
+        <form>
+            <h1>EDITAR PRODUCTO</h1>
+            <br>
+            <h3>Selecciona el producto a editar: <select name="products" id="edit_product_select"></select></h3>
+            <br>
+            <h3>Nombre: <input type="text" name="" id="edit_product_name"></h3>
+            <h3>Descripción: <input type="text" name="" id="edit_product_description"></h3>
+            <h3>Precio: <input type="number" step="0.01" name="" id="edit_product_price"></h3>
+            <h3>¿Disponible?: <input type="checkbox" name="" id="edit_product_available"></h3>
+            <br>
+            <h3>Imagen: </h3>
+            <input type="file" id="add_product_image"></input>
+            <button class="modal-button" id="upload_image">Subir</button>
+            <br>
+            <br>
+            <button class="modal-button" formmethod="dialog">Cancelar</button>
+            <button class="modal-button" id="submit_edit_product">Editar</button>
+        </form>
+    </dialog>
+
+    <dialog delete-product class="modal">
+        <form>
+            <h1>BORRAR PRODUCTO</h1>
+            <br>
+            <h3>Selecciona el producto a borrar: <select name="products" id="delete_product_select"></select></h3>
+            <br>
+            <button class="modal-button" formmethod="dialog">Cancelar</button>
+            <button class="modal-button" id="submit_delete_product">Borrar</button>
+        </form>
+    </dialog>
+
+    <dialog move class="modal">
+        <form>
+            <h1>PRODUCTO - SECCIÓN</h1>
+            <br>
+            <h3>Selecciona el producto: <select name="products" id="move_products_select"></select></h3>
+            <br>
+            <h3>Selecciona la sección: <select name="sections" id="move_sections_select"></select></h3>
+            <br>
+            <button class="modal-button" formmethod="dialog">Cancelar</button>
+            <button class="modal-button" id="submit_move_product">Añadir producto a la sección</button>
+            <button class="modal-button" id="submit_move_delete_product">Eliminar producto de la sección</button>
+        </form>
+    </dialog>
+
+    <!-- FIN DIÁLOGOS -->
+
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html"><img src="images/logov2.png" alt="Logo"></a>
+        </div>
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="#">Pedidos</a></li>
+            <li class="navbar-item">
+                <a href="#">Secciones</a>
+                <ul class="subnav">
+                    <li class="subnav-item" id="li_add_section" open-create-section>Crear</li>
+                    <li class="subnav-item" id="li_edit_section" open-edit-section>Editar</li>
+                    <li class="subnav-item" id="li_delete_section" open-delete-section>Borrar</li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <a href="#">Productos</a>
+                <ul class="subnav">
+                    <li class="subnav-item" open-create-product>Crear</li>
+                    <li id="li_edit_product" class="subnav-item" open-edit-product>Editar</li>
+                    <li id="li_delete_product" class="subnav-item" open-delete-product>Borrar</li>
+                    <li id="li_move" class="subnav-item" open-move>Producto-Sección</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="card-container" class="card-container">
+        <div class="card">
+        </div>
+    </div>
+
+    <script>
+        const createSectionButton = document.querySelector("[open-create-section]")
+        const editSectionButton = document.querySelector("[open-edit-section]")
+        const deleteSectionButton = document.querySelector("[open-delete-section]")
+
+        const createSectionModal = document.querySelector("[create-section]")
+        const editSectionModal = document.querySelector("[edit-section]")
+        const deleteSectionModal = document.querySelector("[delete-section]")
+
+        const createProductButton = document.querySelector("[open-create-product]")
+        const editProductButton = document.querySelector("[open-edit-product]")
+        const deleteProductButton = document.querySelector("[open-delete-product]")
+
+        const createProductModal = document.querySelector("[create-product]")
+        const editProductModal = document.querySelector("[edit-product]")
+        const deleteProductModal = document.querySelector("[delete-product]")
+
+        const moveModal = document.querySelector("[move]")
+        const moveButton = document.querySelector("[open-move]")
+        
+        createSectionButton.addEventListener("click", () => {
+            createSectionModal.showModal()
+        })
+        editSectionButton.addEventListener("click", () => {
+            editSectionModal.showModal()
+        })
+        deleteSectionButton.addEventListener("click", () => {
+            deleteSectionModal.showModal()
+        })
+
+        createProductButton.addEventListener("click", () => {
+            createProductModal.showModal()
+        })
+        editProductButton.addEventListener("click", () => {
+            editProductModal.showModal()
+        })
+        deleteProductButton.addEventListener("click", () => {
+            deleteProductModal.showModal()
+        })
+
+        moveButton.addEventListener("click", () => {
+            moveModal.showModal()
+        })
+    </script>
+</body>
+
+</html>
