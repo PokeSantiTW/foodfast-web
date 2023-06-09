@@ -25,14 +25,16 @@ Recuerda siempre estar ejecutando ese comando dentro de la carpeta de la página
 ## Tutorial de uso
 Desde la pantalla de inicio puedes ver las ordenes que se mandan al restaurante en tiempo real. Si una orden ya ha sido completada, puedes hacer clic en "Hecho" y desaparecerá de la lista.
 
-![Pantalla principal]()
+![Pantalla principal](https://raw.githubusercontent.com/PokeSantiTW/foodfast-web/main/images/Tutorial1.png)
 
 Pasa el ratón por encima de "Secciones" o "Productos" y podrás ver las acciones de crear, editar y borrar. Estos menús son muy intuitivos, y siempre que te equivoques puedes borrar o editar de nuevo.
 
-![Submenú de secciones]()
+![Submenú de secciones](https://raw.githubusercontent.com/PokeSantiTW/foodfast-web/main/images/Tutorial2.png)
 
 A la hora de crear y editar productos puedes subir imágenes. Para seguir con el estilo de la aplicación se recomienda que sean imágenes con transparencia. Pero se acepta cualquier imagen. 
 
 Si deseas usar una imagen, primero deberás seleccionarla y luego darle a Subir. Si recibes una alerta de que todo es correcto, ya puedes añadir o editar el producto. Pero hacerlo en otro orden puede hacer que la imagen no se refleje.
 
-![Crear producto]()
+<p align="center">
+    <img height="500" src="https://raw.githubusercontent.com/PokeSantiTW/foodfast-web/main/images/Tutorial3.png">
+</p>
